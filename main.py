@@ -14,7 +14,9 @@ def start(message):
     btn2 = types.KeyboardButton('Україна')
     btn3 = types.KeyboardButton('США')
     btn4 = types.KeyboardButton('Росія')
-    markup.add(btn1, btn2, btn3, btn4)
+    btn5 = types.KeyboardButton('Італія')
+    btn6 = types.KeyboardButton('Іспанія')
+    markup.add(btn1, btn2, btn3, btn4, btn5, btn6)
 
     send_message = f"<b>Привіт Chizazez {message.from_user.first_name}!</b>\nНе знаю нашо, але ми зробили цей бот, щоб ти,нашуг, міг швидко і, головне, без метушні подивитися на ситуацію щодо коронавірусу в світі.\nВ данний момент доступні такі країни:\nУкраїна\nСША\nРосія\n<b>Скарги та пропозиції</b>\nМожете писати свої скарги та пропозиції щодо роботи бота нам на сторінку Licey.Chizazez в Instagram"
     bot.send_message(message.chat.id, send_message, parse_mode='html', reply_markup=markup)
@@ -30,6 +32,10 @@ def mess(message):
         location = covid19.getLocationByCountryCode("US")
     elif get_message_bot == "росія":
         location = covid19.getLocationByCountryCode("RU")
+    elif get_message_bot == "італія":
+        location = covid19.getLocationByCountryCode("IT")
+    elif get_message_bot == "іспанія":
+        location = covid19.getLocationByCountryCode("ES")
     else:
         location = covid19.getLatest()
         final_message = f"<u>Ситуація в світі:</u>\n<b>Захворілих: </b>{location['confirmed']:,}\n<b>Смертей: </b>{location['deaths']:,}"
