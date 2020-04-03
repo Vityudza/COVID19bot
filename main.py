@@ -16,7 +16,7 @@ def start(message):
     btn4 = types.KeyboardButton('Росія')
     markup.add(btn1, btn2, btn3, btn4)
 
-    send_message = f"<b>Привіт {message.from_user.first_name}!</b>\nВведіть країну"
+    send_message = f"<b>Привіт Chizazez {message.from_user.first_name}!</b>\nНе знаю нашо, але ми зробили цей бот, щоб ти,нашуг, міг швидко і, головне, без метушні подивитися на ситуацію щодо коронавірусу в світі.\nВ данний момент доступні такі країни:\nУкраїна\nСША\nРосія\n<b>Скарги та пропозиції</b>\nМожете писати свої скарги та пропозиції щодо роботи бота нам на сторінку Licey.Chizazez в Instagram"
     bot.send_message(message.chat.id, send_message, parse_mode='html', reply_markup=markup)
 
 
