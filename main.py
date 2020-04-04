@@ -3,7 +3,7 @@ from telebot import types
 import telebot
 
 covid19 = COVID19Py.COVID19()
-bot = telebot.TeleBot('1028374464:AAFIi0dXN9EiRwXBk6MqpSmteAvJvXH725g')
+bot = telebot.TeleBot('1028374464:AAFLjkbuDw9K8vIB5Fil13QHHpcnmmyYUMw')
 
 
 
