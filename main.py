@@ -33,6 +33,8 @@ def mess(message):
         location = covid19.getLocationByCountryCode("IT")
     elif get_message_bot == "іспанія":
         location = covid19.getLocationByCountryCode("ES")
+    elif get_message_bot == "китай":
+        location = covid19.getLocationByCountryCode("CN")
     else:
         location = covid19.getLatest()
         final_message = f"<u>Ситуація в світі:</u>\n<b>Захворілих: </b>{location['confirmed']:,}\n<b>Смертей: </b>{location['deaths']:,}"
