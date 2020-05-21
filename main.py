@@ -10,13 +10,10 @@ bot = telebot.TeleBot('1028374464:AAFLjkbuDw9K8vIB5Fil13QHHpcnmmyYUMw')
 @bot.message_handler(commands=['start'])
 def start(message):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
-    btn1 = types.KeyboardButton('В усьому світі')
-    btn2 = types.KeyboardButton('Україна')
-    btn3 = types.KeyboardButton('США')
-    btn4 = types.KeyboardButton('Росія')
-    btn5 = types.KeyboardButton('Італія')
-    btn6 = types.KeyboardButton('Іспанія')
-    markup.add(btn1, btn2, btn3, btn4, btn5, btn6)
+    markup.row('В усьому світі')
+    markup.row('Україна', 'США')
+    markup.row('Росія', 'Італія')
+    markup.row('Іспанія', 'Китай')
 
     send_message = f"<b>Привіт Chizazez {message.from_user.first_name}!</b>\nНе знаю нашо, але ми зробили цей бот, щоб ти,нашуг, міг швидко і, головне, без метушні подивитися на ситуацію щодо коронавірусу в світі.\nВ данний момент доступні такі країни:\nУкраїна\nСША\nРосія\n<b>Скарги та пропозиції</b>\nМожете писати свої скарги та пропозиції щодо роботи бота нам на сторінку Licey.Chizazez в Instagram"
     bot.send_message(message.chat.id, send_message, parse_mode='html', reply_markup=markup)
