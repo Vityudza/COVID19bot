@@ -13,7 +13,7 @@ def start(message):
     markup.row('В усьому світі')
     markup.row('Україна', 'США')
     markup.row('Росія', 'Італія')
-    markup.row('Іспанія', 'Китай')
+    markup.row('Іспанія', 'китай')
 
     send_message = f"<b>Привіт Chizazez {message.from_user.first_name}!</b>\nНе знаю нашо, але ми зробили цей бот, щоб ти,нашуг, міг швидко і, головне, без метушні подивитися на ситуацію щодо коронавірусу в світі.\nВ данний момент доступні такі країни:\nУкраїна\nСША\nРосія\n<b>Скарги та пропозиції</b>\nМожете писати свої скарги та пропозиції щодо роботи бота нам на сторінку Licey.Chizazez в Instagram"
     bot.send_message(message.chat.id, send_message, parse_mode='html', reply_markup=markup)
